@@ -206,56 +206,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62616606}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &161443085
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 161443086}
-  - component: {fileID: 161443087}
-  m_Layer: 0
-  m_Name: Pivot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &161443086
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161443085}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.5, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1848448118}
-  m_Father: {fileID: 403220370}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
---- !u!114 &161443087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161443085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3134f0f370391cb4da295e9d000f2b8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  launchPoint: {fileID: 0}
-  projectile: {fileID: 0}
-  acceleration: 9.8
-  initialVelocity: 5
-  launchTime: 1
 --- !u!1 &302471301
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +302,7 @@ GameObject:
   - component: {fileID: 403220370}
   - component: {fileID: 403220369}
   m_Layer: 0
-  m_Name: Launcher
+  m_Name: Mortar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,7 +323,7 @@ MonoBehaviour:
   launchPoint: {fileID: 1038852744}
   projectile: {fileID: 7897455052524881196, guid: 74cdd7e93143ae048b31ea8f3694cd69, type: 3}
   acceleration: 6
-  initialVelocity: 3
+  initialVelocity: 4
   launchTime: 1
 --- !u!4 &403220370
 Transform:
@@ -391,7 +341,7 @@ Transform:
   - {fileID: 1422688307}
   - {fileID: 302471302}
   - {fileID: 1610790542}
-  - {fileID: 161443086}
+  - {fileID: 1848448118}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &506071121
@@ -1103,9 +1053,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610790541}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.1, y: 0.10800004, z: 0.766}
-  m_LocalScale: {x: 2, y: 0.1, z: 2}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.10000038, y: 0.1079998, z: 0.76600045}
+  m_LocalScale: {x: 2, y: 0.10000001, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1070798162}
@@ -1281,7 +1231,7 @@ GameObject:
   - component: {fileID: 1848448120}
   - component: {fileID: 1848448119}
   m_Layer: 0
-  m_Name: Muzzle
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1295,13 +1245,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848448117}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.097, y: 1.056, z: -0.001}
+  m_LocalRotation: {x: -0, y: -0, z: -0.5, w: 0.8660254}
+  m_LocalPosition: {x: 0.8660221, y: 0.6120045, z: -0.001}
   m_LocalScale: {x: 0.9586515, y: 1.5432371, z: 0.9586515}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1038852744}
-  m_Father: {fileID: 161443086}
+  m_Father: {fileID: 403220370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1848448119
 MeshRenderer:
@@ -1560,7 +1510,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.39999998, z: 0}
-  m_LocalScale: {x: 67.80708, y: 1.4156116, z: 7.078058}
+  m_LocalScale: {x: 67.80708, y: 1.4156116, z: 12.631502}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
